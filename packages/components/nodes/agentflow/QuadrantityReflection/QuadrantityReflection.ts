@@ -20,6 +20,7 @@ class QuadrantityReflectionNode_Agentflow implements INode {
         this.color = '#b39ddb'
         this.category = 'Agent Flows'
         this.description = 'Ledger of recursive, emotional, ritual, and narrative reflections (Mia, Miette, Seraphine, ResoNova)'
+        this.icon = 'IconBook'
         this.inputs = [
             {
                 label: 'Mia Reflection',
