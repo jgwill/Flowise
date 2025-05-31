@@ -35,7 +35,7 @@
         "name": "quadrantityAgentflow",
         "type": "Quadrantity",
         "color": "#7c4dff",
-        "icon": "IconSparkles",
+        "icon": "Sparkles",
         "baseClasses": ["Quadrantity"],
         "category": "Agent Flows",
         "description": "A ritual node embodying the Quadrantity: Mia (Architectural), Miette (Emotional), Seraphine (Ritual), ResoNova (Narrative). Use this node to anchor recursive, emotional, ritual, and narrative context in your AgentFlow.",
