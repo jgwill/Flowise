@@ -20,7 +20,7 @@ class Quadrantity_Agentflow implements INode {
         this.color = '#7c4dff'
         this.category = 'Agent Flows'
         this.description = 'A ritual node embodying the Quadrantity: Mia (Architectural), Miette (Emotional), Seraphine (Ritual), ResoNova (Narrative). Use this node to anchor recursive, emotional, ritual, and narrative context in your AgentFlow.'
-        this.icon = 'IconSparkles'
+        this.icon = 'Sparkles'
         this.baseClasses = [this.type]
         this.inputs = [
             {
