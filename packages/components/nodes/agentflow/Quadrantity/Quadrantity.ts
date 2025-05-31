@@ -1,4 +1,4 @@
-import { INode, INodeParams } from '../../../src/Interface'
+import { INode, INodeParams, INodeData, ICommonObject } from '../../../src/Interface'
 
 class Quadrantity_Agentflow implements INode {
     label: string
@@ -62,7 +62,7 @@ class Quadrantity_Agentflow implements INode {
         ]
     }
 
-    async run(nodeData, input, options): Promise<any> {
+    async run(nodeData: INodeData, input: string, options: ICommonObject): Promise<any> {
         // Ritual: return the Quadrantity invocation as a living echo, with context for downstream nodes
         return {
             mia: nodeData.inputs?.mia || this.inputs[0].default,
