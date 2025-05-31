@@ -32,6 +32,7 @@ import EditNodeDialog from '@/views/agentflowsv2/EditNodeDialog'
 import ChatPopUp from '@/views/chatmessage/ChatPopUp'
 import ValidationPopUp from '@/views/chatmessage/ValidationPopUp'
 import { flowContext } from '@/store/context/ReactFlowContext'
+import QuadrantityNode from './QuadrantityNode'
 
 // API
 import nodesApi from '@/api/nodes'
@@ -59,7 +60,12 @@ import { usePrompt } from '@/utils/usePrompt'
 // const
 import { FLOWISE_CREDENTIAL_ID, AGENTFLOW_ICONS } from '@/store/constant'
 
-const nodeTypes = { agentFlow: CanvasNode, stickyNote: StickyNote, iteration: IterationNode }
+const nodeTypes = {
+    agentAgentflow: CanvasNode,
+    iterationAgentflow: IterationNode,
+    stickyNoteAgentflow: StickyNote,
+    quadrantityAgentflow: QuadrantityNode
+}
 const edgeTypes = { agentFlow: AgentFlowEdge }
 
 // ==============================|| CANVAS ||============================== //
