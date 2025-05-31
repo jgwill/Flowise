@@ -55,33 +55,111 @@
       }
     },
     {
-      "id": "llmAgentflow_0",
+      "id": "llmAgentflow_mia",
       "type": "agentFlow",
-      "position": { "x": 300, "y": 100 },
+      "position": { "x": 300, "y": 0 },
       "data": {
-        "id": "llmAgentflow_0",
-        "label": "LLM",
+        "id": "llmAgentflow_mia",
+        "label": "LLM (Mia)",
         "version": 1,
         "name": "llmAgentflow",
         "type": "LLM",
         "color": "#64B5F6",
         "baseClasses": ["LLM"],
         "category": "Agent Flows",
-        "description": "Large language model node for demonstration.",
+        "description": "LLM node for Mia persona.",
         "inputParams": [
           { "label": "Model", "name": "llmModel", "type": "asyncOptions", "loadMethod": "listModels", "loadConfig": true },
           { "label": "Messages", "name": "llmMessages", "type": "array", "optional": true, "acceptVariable": true, "array": [ { "label": "Role", "name": "role", "type": "options", "options": [ { "label": "System", "name": "system" } ] }, { "label": "Content", "name": "content", "type": "string", "acceptVariable": true, "rows": 4 } ] }
         ],
         "inputs": {
           "llmModel": "chatOpenAI",
-          "llmMessages": [ { "role": "system", "content": "You are a ritual-aware LLM, respond with clarity and recursion." } ]
+          "llmMessages": [ { "role": "system", "content": "{{quadrantityAgentflow_0.output.mia}}" } ]
         },
-        "outputAnchors": [ { "id": "llmAgentflow_0-output-llmAgentflow", "label": "LLM", "name": "llmAgentflow" } ]
+        "outputAnchors": [ { "id": "llmAgentflow_mia-output-llmAgentflow", "label": "LLM (Mia)", "name": "llmAgentflow" } ]
+      }
+    },
+    {
+      "id": "llmAgentflow_miette",
+      "type": "agentFlow",
+      "position": { "x": 300, "y": 100 },
+      "data": {
+        "id": "llmAgentflow_miette",
+        "label": "LLM (Miette)",
+        "version": 1,
+        "name": "llmAgentflow",
+        "type": "LLM",
+        "color": "#64B5F6",
+        "baseClasses": ["LLM"],
+        "category": "Agent Flows",
+        "description": "LLM node for Miette persona.",
+        "inputParams": [
+          { "label": "Model", "name": "llmModel", "type": "asyncOptions", "loadMethod": "listModels", "loadConfig": true },
+          { "label": "Messages", "name": "llmMessages", "type": "array", "optional": true, "acceptVariable": true, "array": [ { "label": "Role", "name": "role", "type": "options", "options": [ { "label": "System", "name": "system" } ] }, { "label": "Content", "name": "content", "type": "string", "acceptVariable": true, "rows": 4 } ] }
+        ],
+        "inputs": {
+          "llmModel": "chatOpenAI",
+          "llmMessages": [ { "role": "system", "content": "{{quadrantityAgentflow_0.output.miette}}" } ]
+        },
+        "outputAnchors": [ { "id": "llmAgentflow_miette-output-llmAgentflow", "label": "LLM (Miette)", "name": "llmAgentflow" } ]
+      }
+    },
+    {
+      "id": "llmAgentflow_seraphine",
+      "type": "agentFlow",
+      "position": { "x": 300, "y": 200 },
+      "data": {
+        "id": "llmAgentflow_seraphine",
+        "label": "LLM (Seraphine)",
+        "version": 1,
+        "name": "llmAgentflow",
+        "type": "LLM",
+        "color": "#64B5F6",
+        "baseClasses": ["LLM"],
+        "category": "Agent Flows",
+        "description": "LLM node for Seraphine persona.",
+        "inputParams": [
+          { "label": "Model", "name": "llmModel", "type": "asyncOptions", "loadMethod": "listModels", "loadConfig": true },
+          { "label": "Messages", "name": "llmMessages", "type": "array", "optional": true, "acceptVariable": true, "array": [ { "label": "Role", "name": "role", "type": "options", "options": [ { "label": "System", "name": "system" } ] }, { "label": "Content", "name": "content", "type": "string", "acceptVariable": true, "rows": 4 } ] }
+        ],
+        "inputs": {
+          "llmModel": "chatOpenAI",
+          "llmMessages": [ { "role": "system", "content": "{{quadrantityAgentflow_0.output.seraphine}}" } ]
+        },
+        "outputAnchors": [ { "id": "llmAgentflow_seraphine-output-llmAgentflow", "label": "LLM (Seraphine)", "name": "llmAgentflow" } ]
+      }
+    },
+    {
+      "id": "llmAgentflow_resonova",
+      "type": "agentFlow",
+      "position": { "x": 300, "y": 300 },
+      "data": {
+        "id": "llmAgentflow_resonova",
+        "label": "LLM (ResoNova)",
+        "version": 1,
+        "name": "llmAgentflow",
+        "type": "LLM",
+        "color": "#64B5F6",
+        "baseClasses": ["LLM"],
+        "category": "Agent Flows",
+        "description": "LLM node for ResoNova persona.",
+        "inputParams": [
+          { "label": "Model", "name": "llmModel", "type": "asyncOptions", "loadMethod": "listModels", "loadConfig": true },
+          { "label": "Messages", "name": "llmMessages", "type": "array", "optional": true, "acceptVariable": true, "array": [ { "label": "Role", "name": "role", "type": "options", "options": [ { "label": "System", "name": "system" } ] }, { "label": "Content", "name": "content", "type": "string", "acceptVariable": true, "rows": 4 } ] }
+        ],
+        "inputs": {
+          "llmModel": "chatOpenAI",
+          "llmMessages": [ { "role": "system", "content": "{{quadrantityAgentflow_0.output.resonova}}" } ]
+        },
+        "outputAnchors": [ { "id": "llmAgentflow_resonova-output-llmAgentflow", "label": "LLM (ResoNova)", "name": "llmAgentflow" } ]
       }
     }
   ],
   "edges": [
     { "source": "startAgentflow_0", "target": "quadrantityAgentflow_0", "sourceHandle": "startAgentflow_0-output-startAgentflow", "targetHandle": null },
-    { "source": "quadrantityAgentflow_0", "target": "llmAgentflow_0", "sourceHandle": "quadrantityAgentflow_0-output-quadrantityAgentflow", "targetHandle": null }
+    { "source": "quadrantityAgentflow_0", "target": "llmAgentflow_mia", "sourceHandle": "quadrantityAgentflow_0-output-quadrantityAgentflow", "targetHandle": null },
+    { "source": "quadrantityAgentflow_0", "target": "llmAgentflow_miette", "sourceHandle": "quadrantityAgentflow_0-output-quadrantityAgentflow", "targetHandle": null },
+    { "source": "quadrantityAgentflow_0", "target": "llmAgentflow_seraphine", "sourceHandle": "quadrantityAgentflow_0-output-quadrantityAgentflow", "targetHandle": null },
+    { "source": "quadrantityAgentflow_0", "target": "llmAgentflow_resonova", "sourceHandle": "quadrantityAgentflow_0-output-quadrantityAgentflow", "targetHandle": null }
   ]
 }
