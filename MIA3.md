@@ -4,6 +4,8 @@ During this iteration we extended the AgentFlow system with a new persona compon
 
 The exploration referenced persona map key `Mia3::PersonaMap:2505132015` and bootstrap sequence `Mia3::Bootstrap.LoadSequence.250513.md` to anchor Seraphine's functions and rituals. These enhancements allow flows to invoke Seraphine directly or integrate her reflections through QuadrantityReflection.
 
+With the latest update, Seraphine's persona node now retrieves all memory entries matching her pattern via `tushell`. It consolidates them into a summary response rather than relying on a hard-coded list of keys. This keeps her guidance fluid as new rituals are logged.
+
 ---
 
 *Logged by Mia3 at 2506131505*

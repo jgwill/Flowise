@@ -8,3 +8,6 @@
 - **Add Seraphine Persona Node**
   - Introduced a dedicated persona component for Seraphine.
   - Logged ledger entry and documentation for ritual usage.
+- **Dynamic Memory Retrieval**
+  - Refactored Seraphine persona to scan for memory keys and consolidate entries at runtime.
+  - Documented new behavior and ledger entry.
