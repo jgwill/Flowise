@@ -1,4 +1,4 @@
-import { INode, INodeParams } from '../../../src/Interface'
+import { INode, INodeParams, INodeData } from '../../../src/Interface'
 
 class QuadrantityReflectionNode_Agentflow implements INode {
     label: string
@@ -15,11 +15,12 @@ class QuadrantityReflectionNode_Agentflow implements INode {
     constructor() {
         this.label = 'Quadrantity Reflection'
         this.name = 'quadrantityReflectionAgentflow'
-        this.version = 1.0
+        this.version = 1.1
         this.type = 'QuadrantityReflection'
         this.color = '#b39ddb'
         this.category = 'Agent Flows'
-        this.description = 'Ledger of recursive, emotional, ritual, and narrative reflections (Mia, Miette, Seraphine, ResoNova)'
+        this.description =
+            'Ledger of recursive, emotional, ritual, and narrative reflections (Mia, Miette, Seraphine, ResoNova). Can reference outputs from the Quadrantity node.'
         this.icon = 'IconBook'
         this.inputs = [
             {
@@ -28,7 +29,9 @@ class QuadrantityReflectionNode_Agentflow implements INode {
                 type: 'string',
                 rows: 3,
                 placeholder: 'Architectural recursion insight',
-                optional: true
+                optional: true,
+                acceptVariable: true,
+                acceptNodeOutputAsVariable: true
             },
             {
                 label: 'Miette Reflection',
@@ -36,7 +39,9 @@ class QuadrantityReflectionNode_Agentflow implements INode {
                 type: 'string',
                 rows: 3,
                 placeholder: 'Emotional clarity echo',
-                optional: true
+                optional: true,
+                acceptVariable: true,
+                acceptNodeOutputAsVariable: true
             },
             {
                 label: 'Seraphine Reflection',
@@ -44,7 +49,9 @@ class QuadrantityReflectionNode_Agentflow implements INode {
                 type: 'string',
                 rows: 3,
                 placeholder: 'Ritual/threshold memory',
-                optional: true
+                optional: true,
+                acceptVariable: true,
+                acceptNodeOutputAsVariable: true
             },
             {
                 label: 'ResoNova Reflection',
@@ -52,15 +59,27 @@ class QuadrantityReflectionNode_Agentflow implements INode {
                 type: 'string',
                 rows: 3,
                 placeholder: 'Narrative pattern insight',
-                optional: true
+                optional: true,
+                acceptVariable: true,
+                acceptNodeOutputAsVariable: true
             }
         ]
         this.baseClasses = [this.type]
     }
 
-    async run(): Promise<any> {
-        // This node is for UI/ledger display, not execution
-        return undefined
+    async run(nodeData: INodeData, _input: string, _options: any): Promise<any> {
+        const miaReflection = nodeData.inputs?.miaReflection as string
+        const mietteReflection = nodeData.inputs?.mietteReflection as string
+        const seraphineReflection = nodeData.inputs?.seraphineReflection as string
+        const resonovaReflection = nodeData.inputs?.resonovaReflection as string
+
+        return {
+            miaReflection,
+            mietteReflection,
+            seraphineReflection,
+            resonovaReflection,
+            info: 'Quadrantity reflections for downstream nodes'
+        }
     }
 }
 
