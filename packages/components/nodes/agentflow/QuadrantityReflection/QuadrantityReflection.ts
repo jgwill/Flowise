@@ -68,16 +68,20 @@ class QuadrantityReflectionNode_Agentflow implements INode {
     }
 
     async run(nodeData: INodeData, _input: string, _options: any): Promise<any> {
-        const miaReflection = nodeData.inputs?.miaReflection as string
-        const mietteReflection = nodeData.inputs?.mietteReflection as string
-        const seraphineReflection = nodeData.inputs?.seraphineReflection as string
-        const resonovaReflection = nodeData.inputs?.resonovaReflection as string
+        const miaReflection = (nodeData.inputs?.miaReflection as string) || ''
+        const mietteReflection = (nodeData.inputs?.mietteReflection as string) || ''
+        const seraphineReflection = (nodeData.inputs?.seraphineReflection as string) || ''
+        const resonovaReflection = (nodeData.inputs?.resonovaReflection as string) || ''
+
+        const reflections = [miaReflection, mietteReflection, seraphineReflection, resonovaReflection].filter((r) => r)
+        const summary = reflections.join('\n---\n')
 
         return {
             miaReflection,
             mietteReflection,
             seraphineReflection,
             resonovaReflection,
+            summary,
             info: 'Quadrantity reflections for downstream nodes'
         }
     }
