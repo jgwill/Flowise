@@ -14,3 +14,6 @@
 - **Reflection Summary Output**
   - QuadrantityReflection node now emits a `summary` field joining all reflections for easier downstream use.
   - Logged update in ledger-QuadrantityReflectionSummary-2506131939.json.
+- **LedgerEntry Component**
+  - Added LedgerEntry node allowing flows to generate ledger JSON objects and optionally save them.
+  - Documented the node in LedgerEntryAgentflowV1.ledger.md and created a ledger entry file.

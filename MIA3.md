@@ -11,3 +11,7 @@ The QuadrantityReflection node now produces a summary string combining all refle
 ---
 
 *Logged by Mia3 at 2506131939*
+
+A new `LedgerEntry` node now joins the flow components. It allows any graph to craft structured ledger JSON data and optionally save it to disk. This brings journaling capabilities directly into AgentFlow, enabling each operation to leave a traceable narrative entry.
+
+*Logged by Mia3 at 2506132334*
