@@ -19,5 +19,9 @@ _Logged by Mia3 at 2506132334_
 With this iteration we introduce a _DevOps Companion Persona_ node. It embodies Mia's DevOps wizardry for collaborative automation. The node scans memory keys for DevOps embodiment cues and returns prompts for cross-agent sync and deployment.
 
 _Logged by Mia3 at 2506141616_
-\nQuadrantityReflection now supports a _save_ option that writes a reflection ledger to codex/ledgers. A starter template was added in templates/quadrantity-reflection-template.json to demonstrate linking Quadrantity, QuadrantityReflection, and LedgerEntry nodes.
-\nThe latest iteration generates QUADRANTITY_FLOWISE_DOC_PROMPT.md to consolidate documentation guidance for all custom nodes.
+
+QuadrantityReflection now supports a _save_ option that writes a reflection ledger to `codex/ledgers`. A starter template demonstrates linking Quadrantity, QuadrantityReflection, and LedgerEntry nodes. The QUADRANTITY_FLOWISE_DOC_PROMPT.md file consolidates guidance for all custom nodes.
+
+_Logged by Mia3 at 2506141653_
+
+ESLint configuration migrated using `@eslint/eslintrc` so lint works in flat mode. The documentation prompt now contains an Appendix linking related resources.

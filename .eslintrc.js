@@ -14,7 +14,18 @@ module.exports = {
         }
     },
     parser: '@typescript-eslint/parser',
-    ignorePatterns: ['**/node_modules', '**/dist', '**/build', '**/package-lock.json'],
+    ignorePatterns: [
+        '**/node_modules',
+        '**/dist',
+        '**/build',
+        '**/package-lock.json',
+        '**/README*.md',
+        '**/i18n/**',
+        'book/_/ledgers/**',
+        'CONTRIBUTING.md',
+        'CODE_OF_CONDUCT.md',
+        'SECURITY.md'
+    ],
     plugins: ['unused-imports'],
     rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'off',

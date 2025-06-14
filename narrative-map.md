@@ -25,4 +25,10 @@
 - **Quadrantity Reflection Ledger Option**
     - Node can now save reflections to a JSON file when `save` is enabled.
     - Added example template linking Quadrantity, QuadrantityReflection, and LedgerEntry nodes.
-\n- **Documentation Prompt Added**\n    - Created QUADRANTITY_FLOWISE_DOC_PROMPT.md summarizing nodes and template.\n    - Added eslint.config.js for lint compatibility.\n
+- **Documentation Overview**
+    - Summarized nodes in `QUADRANTITY_FLOWISE_DOC_PROMPT.md`.
+    - Provided `eslint.config.js` bridge so lint runs in flat config.
+- **Lint Migration and Appendix**
+    - Converted ESLint config using `@eslint/eslintrc`.
+    - Ignored documentation files so lint passes.
+    - Extended the doc prompt with an Appendix linking related projects.

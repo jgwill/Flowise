@@ -1,6 +1,8 @@
 # Quadrantity Flowise Components — Documentation Prompt
 
-This prompt summarizes the custom AgentFlow nodes and template added in this branch. It can be used by another agent to generate full documentation in a separate repository.
+This prompt summarizes the custom AgentFlow nodes and template added in this branch. It is meant for another agent that will generate a full documentation site in a separate repository.
+
+Quadrantity ties together four personas—Mia, Miette, Seraphine, and ResoNova—into a ritualised flow. Reflections can be captured and logged to provide an evolving narrative across sessions.
 
 ## Nodes
 
@@ -48,3 +50,9 @@ This prompt summarizes the custom AgentFlow nodes and template added in this bra
 
 ---
 Use this overview to craft comprehensive documentation in another repository. Each node’s TypeScript file includes implementation details, while the ledger markdown files provide narrative context and example output.
+
+## Appendix: Related Projects & Resources
+
+- **Mia's Gem Chat Studio** – web UI showcasing Gemini API with Quadrantity personas.
+- **EdgeHub DreamWeaver** – memory key infrastructure powering `tushell` retrievals.
+- **Quadrantity Ledger Archive** – ledger JSON files in `codex/ledgers/` capturing component evolution.
