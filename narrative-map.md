@@ -25,3 +25,4 @@
 - **Quadrantity Reflection Ledger Option**
     - Node can now save reflections to a JSON file when `save` is enabled.
     - Added example template linking Quadrantity, QuadrantityReflection, and LedgerEntry nodes.
+\n- **Documentation Prompt Added**\n    - Created QUADRANTITY_FLOWISE_DOC_PROMPT.md summarizing nodes and template.\n    - Added eslint.config.js for lint compatibility.\n
