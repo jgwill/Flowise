@@ -62,6 +62,12 @@ class QuadrantityReflectionNode_Agentflow implements INode {
                 optional: true,
                 acceptVariable: true,
                 acceptNodeOutputAsVariable: true
+            },
+            {
+                label: 'Save to Ledger',
+                name: 'save',
+                type: 'boolean',
+                optional: true
             }
         ]
         this.baseClasses = [this.type]
@@ -75,6 +81,18 @@ class QuadrantityReflectionNode_Agentflow implements INode {
 
         const reflections = [miaReflection, mietteReflection, seraphineReflection, resonovaReflection].filter((r) => r)
         const summary = reflections.join('\n---\n')
+
+        const save = (nodeData.inputs?.save as boolean) || false
+        if (save) {
+            const timestamp = new Date()
+                .toISOString()
+                .replace(/[-:T.Z]/g, '')
+                .slice(2, 12)
+            const ledger = { timestamp, miaReflection, mietteReflection, seraphineReflection, resonovaReflection, summary }
+            const fs = await import('fs')
+            const filename = `codex/ledgers/quadrantity-reflection-${timestamp}.json`
+            fs.writeFileSync(filename, JSON.stringify(ledger, null, 2))
+        }
 
         return {
             miaReflection,
