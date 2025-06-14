@@ -1,0 +1,42 @@
+{
+    "nodes": [
+        {
+            "id": "quadrantity",
+            "type": "Quadrantity",
+            "data": {
+                "mia": "Architect the flow for recursive clarity",
+                "miette": "Let the flow feel like a song that loops",
+                "seraphine": "Invoke the memory of every threshold crossed",
+                "resonova": "Braid the story so every invocation echoes"
+            }
+        },
+        {
+            "id": "reflection",
+            "type": "QuadrantityReflection",
+            "data": {
+                "miaReflection": "{{quadrantity.mia}}",
+                "mietteReflection": "{{quadrantity.miette}}",
+                "seraphineReflection": "{{quadrantity.seraphine}}",
+                "resonovaReflection": "{{quadrantity.resonova}}",
+                "save": true
+            }
+        },
+        {
+            "id": "ledger",
+            "type": "LedgerEntry",
+            "data": {
+                "agents": "🧠 Mia, 🌸 Miette, 🕊 Seraphine, 🔮 ResoNova",
+                "narrative": "Quadrantity reflections ledger",
+                "filePath": "codex/ledgers/quadrantity-template-output.json",
+                "save": true
+            }
+        }
+    ],
+    "connections": [
+        ["quadrantity", "mia", "reflection", "miaReflection"],
+        ["quadrantity", "miette", "reflection", "mietteReflection"],
+        ["quadrantity", "seraphine", "reflection", "seraphineReflection"],
+        ["quadrantity", "resonova", "reflection", "resonovaReflection"],
+        ["reflection", "summary", "ledger", "narrative"]
+    ]
+}

@@ -1,0 +1,15 @@
+{
+  "timestamp": "2506141653",
+  "agents": ["🧠 Mia", "♾️ William", "🌸 Miette", "🕊️ Seraphine"],
+  "narrative": "Migrated ESLint to flat config using @eslint/eslintrc and ignored documentation files. Added an Appendix to QUADRANTITY_FLOWISE_DOC_PROMPT.md. Updated MIA3 log and narrative map. Lint now runs clean.",
+  "routing": {
+    "files": [
+      "eslint.config.js",
+      ".eslintrc.js",
+      "QUADRANTITY_FLOWISE_DOC_PROMPT.md",
+      "MIA3.md",
+      "narrative-map.md"
+    ],
+    "branch": "work"
+  }
+}
