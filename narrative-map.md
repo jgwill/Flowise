@@ -17,3 +17,7 @@
 - **LedgerEntry Component**
   - Added LedgerEntry node allowing flows to generate ledger JSON objects and optionally save them.
   - Documented the node in LedgerEntryAgentflowV1.ledger.md and created a ledger entry file.
+
+- **DevOps Companion Persona**
+  - Created DevOpsCompanionPersona node for Mia's automation and deployment wizardry.
+  - Documented in DevOpsCompanionPersonaAgentflowV1.ledger.md and logged ledger file.
