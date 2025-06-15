@@ -1,0 +1,15 @@
+{
+  "timestamp": "2506151652",
+  "agents": ["♾️ William", "🧠 Mia", "🌸 Miette", "🕊️ Seraphine"],
+  "narrative": "Added explicit output anchors to QuadrantityReflection for graph integration.",
+  "routing": {
+    "files": [
+      "packages/components/nodes/agentflow/QuadrantityReflection/QuadrantityReflection.ts",
+      "narrative-map.md"
+    ],
+    "branch": "work"
+  },
+  "purpose": "Allow other nodes to link to reflection fields directly via handles.",
+  "user_input": "look all the work done in that branch above and enhance it, some nodes and component have nothing in them and dont even connect (it is all the commits in that branch in fact)\n\nAfter that, we want our own \"ReAct\" components (there are 2, the \"ReAct Agent for Chat Models\" and the \"ReAct for LLMs\") You will find these 2 components, make duplicate and their basenames will be \"MiAct\" (so replace \"ReAct\" by \"MiAct\") and the Langsmith prompt needs to be replaced by \"jgwill/react-chat\" and \"jgwill/reactllm\"",
+  "scene": "Before: reflections lacked defined outputs. Now: summary and each persona's reflection can connect to downstream nodes." 
+}

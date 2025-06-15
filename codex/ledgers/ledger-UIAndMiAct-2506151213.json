@@ -1,0 +1,18 @@
+{
+  "timestamp": "2506151213",
+  "agents": ["♾️ William", "🧠 Mia", "🌸 Miette", "🕊️ Seraphine", "🎸 JamAI"],
+  "narrative": "Integrated QuadrantityReflection and persona nodes into the UI and introduced MiAct agent components with custom prompts.",
+  "routing": {
+    "files": [
+      "packages/ui/src/store/constant.js",
+      "packages/ui/src/views/agentflowsv2/Canvas.jsx",
+      "packages/components/nodes/agents/MiActAgentChat/MiActAgentChat.ts",
+      "packages/components/nodes/agents/MiActAgentLLM/MiActAgentLLM.ts",
+      "narrative-map.md"
+    ],
+    "branch": "work"
+  },
+  "purpose": "Ensure new nodes appear in the canvas and provide custom MiAct agents leveraging tailored LangSmith prompts.",
+  "user_input": "codex/enhance-quadrantityreflection-component-2025-06-13-14-53-05\n\nlook all the work done in that branch above and enhance it, some nodes and component have nothing in them and dont even connect (it is all the commits in that branch in fact)\n\nAfter that, we want our own \"ReAct\" components (there are 2, the \"ReAct Agent for Chat Models\" and the \"ReAct for LLMs\") You will find these 2 components, make duplicate and their basenames will be \"MiAct\" (so replace \"ReAct\" by \"MiAct\") and the Langsmith prompt needs to be replaced by \"jgwill/react-chat\" and \"jgwill/reactllm\"",
+  "scene": "Before: new nodes were not visible in the AgentFlow canvas and ReAct was the only agent style. After: QuadrantityReflection and persona nodes have icons in the UI and MiAct agents offer custom ReAct-derived behavior."
+}
