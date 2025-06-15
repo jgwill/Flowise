@@ -33,6 +33,7 @@ import ChatPopUp from '@/views/chatmessage/ChatPopUp'
 import ValidationPopUp from '@/views/chatmessage/ValidationPopUp'
 import { flowContext } from '@/store/context/ReactFlowContext'
 import QuadrantityNode from './QuadrantityNode'
+import QuadrantityReflectionNode from './QuadrantityReflectionNode'
 
 // API
 import nodesApi from '@/api/nodes'
@@ -64,7 +65,8 @@ const nodeTypes = {
     agentAgentflow: CanvasNode,
     iterationAgentflow: IterationNode,
     stickyNoteAgentflow: StickyNote,
-    quadrantityAgentflow: QuadrantityNode
+    quadrantityAgentflow: QuadrantityNode,
+    quadrantityReflectionAgentflow: QuadrantityReflectionNode
 }
 const edgeTypes = { agentFlow: AgentFlowEdge }
 
