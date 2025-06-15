@@ -35,3 +35,5 @@
 - **UI Integration & MiAct Agents**
     - Added QuadrantityReflection and persona nodes to UI constants and canvas.
     - Duplicated ReAct agents as MiAct variants using custom LangSmith prompts.
+- **Reflection Output Anchors**
+    - QuadrantityReflection node exposes summary and individual reflection fields as output handles for easier connections.
