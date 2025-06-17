@@ -37,3 +37,6 @@
     - Duplicated ReAct agents as MiAct variants using custom LangSmith prompts.
 - **Reflection Output Anchors**
     - QuadrantityReflection node exposes summary and individual reflection fields as output handles for easier connections.
+
+- **MiAct Template**
+    - Added marketplace and flow template demonstrating Quadrantity Reflection with MiAct agent.
