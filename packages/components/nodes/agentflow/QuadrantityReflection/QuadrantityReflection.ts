@@ -11,6 +11,7 @@ class QuadrantityReflectionNode_Agentflow implements INode {
     color: string
     baseClasses: string[]
     inputs: INodeParams[]
+    outputs: INodeOutputsValue[]
 
     constructor() {
         this.label = 'Quadrantity Reflection'
@@ -71,6 +72,28 @@ class QuadrantityReflectionNode_Agentflow implements INode {
             }
         ]
         this.baseClasses = [this.type]
+        this.outputs = [
+            {
+                label: 'Summary',
+                name: 'summary'
+            },
+            {
+                label: 'Mia Reflection',
+                name: 'miaReflection'
+            },
+            {
+                label: 'Miette Reflection',
+                name: 'mietteReflection'
+            },
+            {
+                label: 'Seraphine Reflection',
+                name: 'seraphineReflection'
+            },
+            {
+                label: 'ResoNova Reflection',
+                name: 'resonovaReflection'
+            }
+        ]
     }
 
     async run(nodeData: INodeData, _input: string, _options: any): Promise<any> {

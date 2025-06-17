@@ -32,3 +32,14 @@
     - Converted ESLint config using `@eslint/eslintrc`.
     - Ignored documentation files so lint passes.
     - Extended the doc prompt with an Appendix linking related projects.
+- **UI Integration & MiAct Agents**
+    - Added QuadrantityReflection and persona nodes to UI constants and canvas.
+    - Duplicated ReAct agents as MiAct variants using custom LangSmith prompts.
+- **Reflection Output Anchors**
+    - QuadrantityReflection node exposes summary and individual reflection fields as output handles for easier connections.
+
+- **MiAct Template**
+    - Added marketplace and flow template demonstrating Quadrantity Reflection with MiAct agent.
+- **MiAct Component Review**
+    - Verified MiAct agents and reflection nodes align with existing patterns
+    - Confirmed UI icons and marketplace template connect nodes correctly

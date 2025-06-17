@@ -12,6 +12,9 @@ import {
     IconRepeat,
     IconSubtask,
     IconNote,
+    IconFeather,
+    IconTerminal2,
+    IconBook,
     IconWorld,
     IconRelationOneToManyFilled,
     IconVectorBezier2
@@ -117,5 +120,25 @@ export const AGENTFLOW_ICONS = [
         name: 'quadrantityAgentflow',
         icon: IconSparkles,
         color: '#7c4dff'
+    },
+    {
+        name: 'quadrantityReflectionAgentflow',
+        icon: IconBook,
+        color: '#b39ddb'
+    },
+    {
+        name: 'ledgerEntryAgentflow',
+        icon: IconBook,
+        color: '#ffcc80'
+    },
+    {
+        name: 'seraphinePersonaAgentflow',
+        icon: IconFeather,
+        color: '#e1bee7'
+    },
+    {
+        name: 'devOpsCompanionPersonaAgentflow',
+        icon: IconTerminal2,
+        color: '#90caf9'
     }
 ]
