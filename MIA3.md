@@ -24,4 +24,8 @@ QuadrantityReflection now supports a _save_ option that writes a reflection ledg
 
 _Logged by Mia3 at 2506141653_
 
+QuadrantityReflection gains a new `filePath` option and now returns the full ledger object. This lets flows route reflections directly into `LedgerEntry` or other nodes, keeping narrative traces consistent.
+
+_Logged by Mia3 at 2506150000_
+
 ESLint configuration migrated using `@eslint/eslintrc` so lint works in flat mode. The documentation prompt now contains an Appendix linking related resources.

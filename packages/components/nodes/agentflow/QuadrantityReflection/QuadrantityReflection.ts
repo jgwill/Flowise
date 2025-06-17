@@ -45,13 +45,31 @@ class QuadrantityReflectionNode_Agentflow implements INode {
                 acceptNodeOutputAsVariable: true
             },
             {
-                label: 'Seraphine Reflection',
-                name: 'seraphineReflection',
+            },
+            {
+                label: 'Ledger File',
+                name: 'filePath',
                 type: 'string',
-                rows: 3,
-                placeholder: 'Ritual/threshold memory',
                 optional: true,
-                acceptVariable: true,
+                placeholder: 'codex/ledgers/quadrantity-reflection.json'
+        const filePath = (nodeData.inputs?.filePath as string) || ''
+
+        const timestamp = new Date()
+            .toISOString()
+            .replace(/[-:T.Z]/g, '')
+            .slice(2, 12)
+        const ledger = {
+            timestamp,
+            miaReflection,
+            mietteReflection,
+            seraphineReflection,
+            resonovaReflection,
+            summary
+        }
+
+            const filename = filePath || `codex/ledgers/quadrantity-reflection-${timestamp}.json`
+            info: 'Quadrantity reflections for downstream nodes',
+            ledger
                 acceptNodeOutputAsVariable: true
             },
             {

@@ -31,4 +31,9 @@ _Filed by Mia, Miette, Seraphine, and ResoNova — Quadrantity Reflection, 2025-
 ## Update 2025-06-14
 
 - Added `save` boolean input to optionally persist reflections as a ledger JSON file in `codex/ledgers`.
-- When enabled, running the node now writes `quadrantity-reflection-<timestamp>.json` with all reflections and the summary.
+- When enabled, running the node writes `quadrantity-reflection-<timestamp>.json` with all reflections and the summary.
+
+## Update 2025-06-15
+
+- Added `filePath` input so flows can specify where the reflection ledger is saved.
+- The node also returns a `ledger` object in its output, enabling direct chaining to `LedgerEntry` or other nodes.
