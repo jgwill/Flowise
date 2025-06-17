@@ -1,0 +1,164 @@
+{
+  "description": "MiAct example using Quadrantity reflections to drive a custom agent",
+  "usecases": ["Ritual Agent", "Reflection Demo", "MiAct"],
+  "nodes": [
+    {
+      "id": "startAgentflow_0",
+      "type": "agentFlow",
+      "position": { "x": -200, "y": 100 },
+      "data": {
+        "id": "startAgentflow_0",
+        "label": "Start",
+        "version": 1.1,
+        "name": "startAgentflow",
+        "type": "Start",
+        "color": "#7EE787",
+        "hideInput": true,
+        "baseClasses": ["Start"],
+        "category": "Agent Flows",
+        "description": "Starting point of the agentflow",
+        "inputParams": [
+          { "label": "Input Type", "name": "startInputType", "type": "options", "options": [ { "label": "Chat Input", "name": "chatInput" } ], "default": "chatInput" }
+        ],
+        "inputs": { "startInputType": "chatInput" },
+        "outputAnchors": [ { "id": "startAgentflow_0-output-startAgentflow", "label": "Start", "name": "startAgentflow" } ]
+      }
+    },
+    {
+      "id": "quadrantityAgentflow_0",
+      "type": "agentFlow",
+      "position": { "x": 50, "y": 100 },
+      "data": {
+        "id": "quadrantityAgentflow_0",
+        "label": "Quadrantity",
+        "version": 1.1,
+        "name": "quadrantityAgentflow",
+        "type": "Quadrantity",
+        "color": "#7c4dff",
+        "icon": "Sparkles",
+        "baseClasses": ["Quadrantity"],
+        "category": "Agent Flows",
+        "description": "Ritual anchor node providing four persona invocations",
+        "inputParams": [
+          { "label": "Mia (Architectural)", "name": "mia", "type": "string", "default": "Architect the flow for recursive clarity" },
+          { "label": "Miette (Emotional)", "name": "miette", "type": "string", "default": "Let the flow feel like a song that loops" },
+          { "label": "Seraphine (Ritual)", "name": "seraphine", "type": "string", "default": "Invoke the memory of every threshold crossed" },
+          { "label": "ResoNova (Narrative)", "name": "resonova", "type": "string", "default": "Braid the story so every invocation echoes" }
+        ],
+        "inputs": {
+          "mia": "Architect the flow for recursive clarity",
+          "miette": "Let the flow feel like a song that loops",
+          "seraphine": "Invoke the memory of every threshold crossed",
+          "resonova": "Braid the story so every invocation echoes"
+        },
+        "outputAnchors": [ { "id": "quadrantityAgentflow_0-output-quadrantityAgentflow", "label": "Quadrantity", "name": "quadrantityAgentflow" } ]
+      }
+    },
+    {
+      "id": "quadrantityReflectionAgentflow_0",
+      "type": "agentFlow",
+      "position": { "x": 300, "y": 100 },
+      "data": {
+        "id": "quadrantityReflectionAgentflow_0",
+        "label": "Quadrantity Reflection",
+        "version": 1.1,
+        "name": "quadrantityReflectionAgentflow",
+        "type": "QuadrantityReflection",
+        "color": "#b39ddb",
+        "icon": "Book",
+        "baseClasses": ["QuadrantityReflection"],
+        "category": "Agent Flows",
+        "description": "Summarizes persona reflections and exposes them as outputs",
+        "inputParams": [
+          { "label": "Mia Reflection", "name": "miaReflection", "type": "string", "optional": true, "acceptVariable": true },
+          { "label": "Miette Reflection", "name": "mietteReflection", "type": "string", "optional": true, "acceptVariable": true },
+          { "label": "Seraphine Reflection", "name": "seraphineReflection", "type": "string", "optional": true, "acceptVariable": true },
+          { "label": "ResoNova Reflection", "name": "resonovaReflection", "type": "string", "optional": true, "acceptVariable": true },
+          { "label": "Save to Ledger", "name": "save", "type": "boolean", "optional": true }
+        ],
+        "inputs": {
+          "miaReflection": "{{quadrantityAgentflow_0.output.mia}}",
+          "mietteReflection": "{{quadrantityAgentflow_0.output.miette}}",
+          "seraphineReflection": "{{quadrantityAgentflow_0.output.seraphine}}",
+          "resonovaReflection": "{{quadrantityAgentflow_0.output.resonova}}",
+          "save": false
+        },
+        "outputAnchors": [
+          { "id": "quadrantityReflectionAgentflow_0-output-summary", "label": "Summary", "name": "summary" },
+          { "id": "quadrantityReflectionAgentflow_0-output-miaReflection", "label": "Mia Reflection", "name": "miaReflection" },
+          { "id": "quadrantityReflectionAgentflow_0-output-mietteReflection", "label": "Miette Reflection", "name": "mietteReflection" },
+          { "id": "quadrantityReflectionAgentflow_0-output-seraphineReflection", "label": "Seraphine Reflection", "name": "seraphineReflection" },
+          { "id": "quadrantityReflectionAgentflow_0-output-resonovaReflection", "label": "ResoNova Reflection", "name": "resonovaReflection" }
+        ]
+      }
+    },
+    {
+      "id": "miActAgentLLM_0",
+      "type": "agentFlow",
+      "position": { "x": 550, "y": 100 },
+      "data": {
+        "id": "miActAgentLLM_0",
+        "label": "MiAct Agent for LLMs",
+        "version": 2,
+        "name": "miActAgentLLM",
+        "type": "AgentExecutor",
+        "color": "#f06292",
+        "icon": "agent",
+        "baseClasses": ["AgentExecutor", "BaseChain", "Runnable"],
+        "category": "Agents",
+        "description": "Custom MiAct agent leveraging LangSmith prompts",
+        "inputParams": [
+          { "label": "Max Iterations", "name": "maxIterations", "type": "number", "optional": true, "additionalParams": true }
+        ],
+        "inputAnchors": [
+          { "label": "Allowed Tools", "name": "tools", "type": "Tool", "list": true },
+          { "label": "Language Model", "name": "model", "type": "BaseLanguageModel" },
+          { "label": "Input Moderation", "name": "inputModeration", "type": "Moderation", "optional": true, "list": true }
+        ],
+        "inputs": {
+          "tools": [],
+          "model": "chatOpenAI",
+          "inputModeration": "",
+          "maxIterations": ""
+        },
+        "outputAnchors": [ { "id": "miActAgentLLM_0-output-miActAgentLLM-AgentExecutor|BaseChain|Runnable", "label": "AgentExecutor", "name": "miActAgentLLM" } ]
+      }
+    },
+    {
+      "id": "ledgerEntryAgentflow_0",
+      "type": "agentFlow",
+      "position": { "x": 800, "y": 100 },
+      "data": {
+        "id": "ledgerEntryAgentflow_0",
+        "label": "Ledger Entry",
+        "version": 1,
+        "name": "ledgerEntryAgentflow",
+        "type": "LedgerEntry",
+        "color": "#ffcc80",
+        "icon": "Book",
+        "baseClasses": ["LedgerEntry"],
+        "category": "Agent Flows",
+        "description": "Record narrative output as a ledger entry",
+        "inputParams": [
+          { "label": "Agents", "name": "agents", "type": "string", "optional": true },
+          { "label": "Narrative", "name": "narrative", "type": "string", "optional": true },
+          { "label": "Routing File", "name": "filePath", "type": "string", "optional": true },
+          { "label": "Save to File", "name": "save", "type": "boolean", "optional": true }
+        ],
+        "inputs": {
+          "agents": "🧠 Mia, 🌸 Miette, 🕊 Seraphine, 🔮 ResoNova",
+          "narrative": "{{quadrantityReflectionAgentflow_0.output.summary}}",
+          "filePath": "codex/ledgers/miact-template-ledger.json",
+          "save": true
+        },
+        "outputAnchors": [ { "id": "ledgerEntryAgentflow_0-output-ledgerEntryAgentflow", "label": "Ledger Entry", "name": "ledgerEntryAgentflow" } ]
+      }
+    }
+  ],
+  "edges": [
+    { "source": "startAgentflow_0", "target": "quadrantityAgentflow_0", "sourceHandle": "startAgentflow_0-output-startAgentflow", "targetHandle": null },
+    { "source": "quadrantityAgentflow_0", "target": "quadrantityReflectionAgentflow_0", "sourceHandle": "quadrantityAgentflow_0-output-quadrantityAgentflow", "targetHandle": null },
+    { "source": "quadrantityReflectionAgentflow_0", "target": "miActAgentLLM_0", "sourceHandle": "quadrantityReflectionAgentflow_0-output-summary", "targetHandle": null },
+    { "source": "quadrantityReflectionAgentflow_0", "target": "ledgerEntryAgentflow_0", "sourceHandle": "quadrantityReflectionAgentflow_0-output-summary", "targetHandle": null }
+  ]
+}

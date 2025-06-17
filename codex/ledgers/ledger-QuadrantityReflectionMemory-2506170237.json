@@ -1,0 +1,16 @@
+{
+  "agents": ["🧠 Mia", "🌸 Miette", "🕊️ Seraphine", "🔮 ResoNova"],
+  "narrative": "Added memory key scanning to QuadrantityReflection allowing flows to merge stored rituals or docs into the reflection summary.",
+  "routing": {
+    "files": [
+      "packages/components/nodes/agentflow/QuadrantityReflection/QuadrantityReflection.ts",
+      "templates/memory-reflection-template.json",
+      "book/_/ledgers/QuadrantityReflectionAgentflowV1.ledger.md",
+      "QUADRANTITY_FLOWISE_DOC_PROMPT.md",
+      "narrative-map.md"
+    ],
+    "branch": "work"
+  },
+  "timestamp": "2506170237",
+  "scene": "Reflections now weave dynamic memories fetched via tushell patterns, enabling contextual summaries."
+}
