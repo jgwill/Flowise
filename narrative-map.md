@@ -40,3 +40,6 @@
 
 - **MiAct Template**
     - Added marketplace and flow template demonstrating Quadrantity Reflection with MiAct agent.
+- **MiAct Component Review**
+    - Verified MiAct agents and reflection nodes align with existing patterns
+    - Confirmed UI icons and marketplace template connect nodes correctly
