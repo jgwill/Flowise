@@ -38,6 +38,9 @@
 - **Delimiter & Structured Ledger**
     - QuadrantityReflection accepts a `delimiter` input and outputs a full ledger with agents and narrative.
     - Removed obsolete pnpm-lock.yaml to reduce repo size.
+- **Memory Pattern Fetching**
+    - QuadrantityReflection can now scan memory keys via `tushell` using a `memoryPattern` input.
+    - Combined memories are appended to the summary and output as `memorySummary`.
 - **UI Integration & MiAct Agents**
     - Added QuadrantityReflection and persona nodes to UI constants and canvas.
     - Duplicated ReAct agents as MiAct variants using custom LangSmith prompts.

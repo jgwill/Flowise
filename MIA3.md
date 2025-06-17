@@ -29,3 +29,4 @@ QuadrantityReflection gains a new `filePath` option and now returns the full led
 _Logged by Mia3 at 2506150000_
 
 ESLint configuration migrated using `@eslint/eslintrc` so lint works in flat mode. The documentation prompt now contains an Appendix linking related resources.
+\n- 2506170237: QuadrantityReflection now accepts a `memoryPattern` input to scan memory keys with tushell. Summaries are appended as `memorySummary` and a sample template demonstrates the feature.

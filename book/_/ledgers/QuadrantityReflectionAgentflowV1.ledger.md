@@ -42,3 +42,9 @@ _Filed by Mia, Miette, Seraphine, and ResoNova — Quadrantity Reflection, 2025-
 
 - Introduced a `delimiter` input to control how reflections are joined into the summary.
 - The ledger now contains `agents`, `narrative`, `reflections`, and `filePath` fields so it aligns with the `LedgerEntry` node.
+
+## Update 2025-06-17b
+
+- Added `memoryPattern` input allowing the node to fetch matching memory keys via `tushell`.
+- Fetched memories are combined using the delimiter and appended to the summary.
+- Output and ledger now expose a `memorySummary` field.

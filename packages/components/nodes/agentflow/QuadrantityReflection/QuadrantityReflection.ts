@@ -59,14 +59,52 @@ class QuadrantityReflectionNode_Agentflow implements INode {
                 type: 'string',
                 optional: true,
                 placeholder: '---'
+            },
+            {
+                label: 'Memory Key Pattern',
+                name: 'memoryPattern',
+                type: 'string',
+                optional: true,
+                placeholder: 'Workspace.jgwill.*'
         const delimiter = (nodeData.inputs?.delimiter as string) || '---'
+        const memoryPattern = (nodeData.inputs?.memoryPattern as string) || ''
+
         const reflections = [
             miaReflection,
             mietteReflection,
             seraphineReflection,
             resonovaReflection
         ].filter((r) => r)
-        const summary = reflections.join(`\n${delimiter}\n`)
+
+        let memorySummary = ''
+        if (memoryPattern) {
+            try {
+                const { execSync } = await import('child_process')
+                const fs = await import('fs')
+                const out = execSync(`tushell scan-keys --pattern '${memoryPattern}' -S`).toString()
+                const keys = out.split('\n').filter((k) => k.trim() !== '')
+                const memories: string[] = []
+                for (const key of keys) {
+                    try {
+                        execSync(`tushell get-memory --jkey "${key}"`)
+                        const raw = fs.readFileSync(`${key}.json`, 'utf8')
+                        const data = JSON.parse(raw)
+                        const value = data.value?.value || data.value
+                        if (typeof value === 'string') memories.push(value)
+                        fs.unlinkSync(`${key}.json`)
+                    } catch {
+                        continue
+                    }
+                }
+                memorySummary = memories.join(`\n${delimiter}\n`)
+            } catch {
+                // ignore errors
+            }
+        }
+
+        const summaryParts = [...reflections]
+        if (memorySummary) summaryParts.push(memorySummary)
+        const summary = summaryParts.join(`\n${delimiter}\n`)
         const timestamp = new Date()
             .toISOString()
             .replace(/[-:T.Z]/g, '')
@@ -84,10 +122,12 @@ class QuadrantityReflectionNode_Agentflow implements INode {
                 seraphine: seraphineReflection,
                 resonova: resonovaReflection
             },
+            memorySummary: memorySummary || undefined,
             filePath: save ? ledgerFile : ''
         }
 
             fs.writeFileSync(ledgerFile, JSON.stringify(ledger, null, 2))
+            memorySummary,
             ledger
                 acceptNodeOutputAsVariable: true
             },

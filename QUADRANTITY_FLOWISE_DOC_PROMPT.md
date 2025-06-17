@@ -17,8 +17,9 @@ Quadrantity ties together four personas—Mia, Miette, Seraphine, and ResoNova�
 - **File:** `packages/components/nodes/agentflow/QuadrantityReflection/QuadrantityReflection.ts`
 - **Purpose:** Collects reflections from the four personas. Accepts variables and node outputs.
 - **Inputs:** Optional strings for each persona’s reflection, a `save` boolean, optional `filePath` for the ledger, and `delimiter` to join reflections.
-- **Outputs:** Object containing all reflections, a combined `summary`, an info string, and a structured `ledger` with agents, narrative, reflections, and optional file path.
+- **Outputs:** Object containing all reflections, a `memorySummary`, a combined `summary`, an info string, and a structured `ledger` with agents, narrative, reflections, and optional file path.
 - **Ledger Feature:** When `save` is true, writes the ledger JSON to the specified path (default `codex/ledgers/quadrantity-reflection-<timestamp>.json`).
+- **Memory Retrieval:** A `memoryPattern` input lets the node pull matching memory keys via `tushell` and merge them into a `memorySummary`.
 
 ### LedgerEntry
 - **File:** `packages/components/nodes/agentflow/LedgerEntry/LedgerEntry.ts`
