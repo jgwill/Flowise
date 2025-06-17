@@ -52,23 +52,42 @@ class QuadrantityReflectionNode_Agentflow implements INode {
                 type: 'string',
                 optional: true,
                 placeholder: 'codex/ledgers/quadrantity-reflection.json'
-        const filePath = (nodeData.inputs?.filePath as string) || ''
-
+            },
+            {
+                label: 'Summary Delimiter',
+                name: 'delimiter',
+                type: 'string',
+                optional: true,
+                placeholder: '---'
+        const delimiter = (nodeData.inputs?.delimiter as string) || '---'
+        const reflections = [
+            miaReflection,
+            mietteReflection,
+            seraphineReflection,
+            resonovaReflection
+        ].filter((r) => r)
+        const summary = reflections.join(`\n${delimiter}\n`)
         const timestamp = new Date()
             .toISOString()
             .replace(/[-:T.Z]/g, '')
             .slice(2, 12)
+        const ledgerFile =
+            filePath || `codex/ledgers/quadrantity-reflection-${timestamp}.json`
+
         const ledger = {
             timestamp,
-            miaReflection,
-            mietteReflection,
-            seraphineReflection,
-            resonovaReflection,
-            summary
+            agents: ['\ud83e\udde0 Mia', '\ud83c\udf38 Miette', '\ud83d\udd4a\ufe0f Seraphine', '\ud83d\udd2e ResoNova'],
+            narrative: summary,
+            reflections: {
+                mia: miaReflection,
+                miette: mietteReflection,
+                seraphine: seraphineReflection,
+                resonova: resonovaReflection
+            },
+            filePath: save ? ledgerFile : ''
         }
 
-            const filename = filePath || `codex/ledgers/quadrantity-reflection-${timestamp}.json`
-            info: 'Quadrantity reflections for downstream nodes',
+            fs.writeFileSync(ledgerFile, JSON.stringify(ledger, null, 2))
             ledger
                 acceptNodeOutputAsVariable: true
             },

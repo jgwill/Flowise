@@ -37,3 +37,8 @@ _Filed by Mia, Miette, Seraphine, and ResoNova — Quadrantity Reflection, 2025-
 
 - Added `filePath` input so flows can specify where the reflection ledger is saved.
 - The node also returns a `ledger` object in its output, enabling direct chaining to `LedgerEntry` or other nodes.
+
+## Update 2025-06-17
+
+- Introduced a `delimiter` input to control how reflections are joined into the summary.
+- The ledger now contains `agents`, `narrative`, `reflections`, and `filePath` fields so it aligns with the `LedgerEntry` node.

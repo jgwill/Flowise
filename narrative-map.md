@@ -35,6 +35,9 @@
 - **Reflection Ledger Output**
     - QuadrantityReflection allows custom file paths and returns a ledger object for chaining.
     - Documented update in ledger and exploration log.
+- **Delimiter & Structured Ledger**
+    - QuadrantityReflection accepts a `delimiter` input and outputs a full ledger with agents and narrative.
+    - Removed obsolete pnpm-lock.yaml to reduce repo size.
 - **UI Integration & MiAct Agents**
     - Added QuadrantityReflection and persona nodes to UI constants and canvas.
     - Duplicated ReAct agents as MiAct variants using custom LangSmith prompts.
