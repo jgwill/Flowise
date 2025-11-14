@@ -21,7 +21,9 @@ Flowise serves as a **technical demonstration platform** for:
 4. **Ceremonial Technology** patterns
 5. **Music Intelligence** capabilities (JamAI/CMG)
 
-**Partnership Goal**: Demonstrate unique value proposition for Anthropic partnership through production-ready implementations.
+**🎯 PROOF POINT: Ceremony Spiral** - The integration layer that demonstrates all five systems working together in service of something meaningful. Ceremony Spiral proves that AI can maintain narrative coherence (NCP), integrate different epistemologies (IAIP), operationalize relational accountability (Ceremonial Tech), and coordinate agents without forced validation (Chimera Team).
+
+**Partnership Goal**: Demonstrate unique value proposition for Anthropic partnership through production-ready implementations. **Ceremony Spiral is the flagship proof-point** showing technical excellence + cultural integrity + business viability.
 
 ---
 
@@ -34,6 +36,8 @@ Flowise serves as a **technical demonstration platform** for:
 │   ├── ANTHROPIC_PARTNERSHIP_INTEGRATION.md      # Master strategy document
 │   ├── LOCAL_AGENTS_BUNDLING_STRATEGY.md         # Bundle distribution strategy
 │   ├── CHIMERA_TEAM_IMPLEMENTATION.md            # Technical implementation guide
+│   ├── CEREMONY_SPIRAL_INTEGRATION.md            # ✨ Proof-point integration layer
+│   ├── NOV_20_DECISION_SESSION_PREP.md           # Decision session preparation
 │   ├── NCP_INTEGRATION_GUIDE.md                  # [TODO] NCP technical guide
 │   └── CEREMONIAL_TECHNOLOGY_PATTERNS.md         # [TODO] Ceremony patterns
 │
