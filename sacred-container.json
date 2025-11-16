@@ -1,0 +1,595 @@
+{
+  "$schema": "https://flowise-chimera.org/schemas/sacred-container/v1.0.0",
+  "version": "1.0.0",
+  "metadata": {
+    "created": "2025-11-16T00:00:00Z",
+    "purpose": "Sacred Container Gateway for Season 4 & Chimera Integration",
+    "attribution": {
+      "architects": ["William", "Jerry"],
+      "communities": ["Lakota People", "Mani-Utenam Community"],
+      "framework": "Four Directions Ceremonial Methodology",
+      "license": "IKSL-Bridge v1.0 (Ceremonial)"
+    },
+    "relationalAcknowledgment": "This container bridges technical precision with ceremonial integrity, honoring Indigenous wisdom traditions while serving contemporary technological needs."
+  },
+  "namespace": {
+    "uuid": {
+      "namespace": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+      "description": "UUID v5 namespace for trace lineage generation",
+      "algorithm": "SHA-1 based UUID v5"
+    },
+    "prefix": "flowise-chimera",
+    "ceremonialOrigin": "Four Directions Framework"
+  },
+  "fourDirections": {
+    "east": {
+      "key": "East",
+      "theme": "Emergence",
+      "description": "New beginnings, vision setting, emergence of ideas",
+      "musicalKey": "B major",
+      "colorSymbol": "Yellow/Gold",
+      "season": "Spring",
+      "timeOfDay": "Dawn"
+    },
+    "south": {
+      "key": "South",
+      "theme": "Connection",
+      "description": "Relationships, community gathering, holding together",
+      "musicalKey": "F major",
+      "colorSymbol": "Red",
+      "season": "Summer",
+      "timeOfDay": "Noon"
+    },
+    "west": {
+      "key": "West",
+      "theme": "Reflection",
+      "description": "Transformation, embodiment, building reality",
+      "musicalKey": "G major",
+      "colorSymbol": "Black",
+      "season": "Fall",
+      "timeOfDay": "Dusk"
+    },
+    "north": {
+      "key": "North",
+      "theme": "Wisdom",
+      "description": "Integration, completion, wisdom gathering",
+      "musicalKey": "D major",
+      "colorSymbol": "White",
+      "season": "Winter",
+      "timeOfDay": "Night"
+    },
+    "center": {
+      "key": "Center",
+      "theme": "Balance",
+      "description": "Grounding, balance, sacred pause",
+      "musicalKey": "E minor",
+      "colorSymbol": "Green",
+      "season": "All Seasons",
+      "timeOfDay": "Present Moment"
+    }
+  },
+  "ceremonialProtocols": {
+    "sacredPause": {
+      "enabled": true,
+      "duration": "3-5 breaths",
+      "triggers": ["before_major_decision", "before_community_interaction", "on_error", "on_completion"]
+    },
+    "sixRsCriteria": {
+      "enabled": true,
+      "criteria": [
+        "Respect",
+        "Relationship",
+        "Representation",
+        "Relevance",
+        "Reciprocity",
+        "Responsibility"
+      ],
+      "validationRequired": true,
+      "automatedChecks": true
+    },
+    "sevenGenerations": {
+      "enabled": true,
+      "assessmentRequired": ["major_features", "community_partnerships", "data_handling"],
+      "perspectives": ["ancestors", "current_generation", "seven_generations_future"],
+      "impactThreshold": "medium"
+    },
+    "relationalAccountability": {
+      "enabled": true,
+      "checkInFrequency": "weekly",
+      "whoAffected": true,
+      "howHonoringRelationships": true
+    }
+  },
+  "characterDatabase": {
+    "enabled": true,
+    "schema": "chimera_v1",
+    "parentClasses": [
+      {
+        "name": "Catalyst of Change",
+        "archetypes": ["Jordan", "Nairo", "Mia"],
+        "inheritableProperties": [
+          "wound_type",
+          "soul_power",
+          "mentorship_lineage",
+          "cross_universe_mirrors"
+        ]
+      }
+    ],
+    "universes": [
+      {
+        "id": "post-apocalyptic-earth",
+        "name": "Post-Apocalyptic Earth",
+        "primaryCharacter": "Jordan",
+        "theme": "Rebuilding sacred containers from fragments"
+      },
+      {
+        "id": "intergalactic-confederation",
+        "name": "Intergalactic Confederation",
+        "primaryCharacter": "Nairo",
+        "theme": "Translating ceremony across species"
+      },
+      {
+        "id": "contemporary-urban",
+        "name": "Contemporary Urban",
+        "primaryCharacter": "Mia",
+        "theme": "Reclaiming identity through technology"
+      }
+    ],
+    "mentorshipLineage": {
+      "roots": ["Jimmy K", "Bob", "Bill W"],
+      "contemporary": ["William", "Jerry"],
+      "characters": ["Jordan", "Nairo", "Mia"],
+      "agents": ["Chimera Team"]
+    }
+  },
+  "ncpValidator": {
+    "enabled": true,
+    "version": "9.1",
+    "layers": [
+      "Situation Layer",
+      "Action Layer",
+      "Justification Layer",
+      "Opinion Layer",
+      "Mystery Layer",
+      "Structural Integrity",
+      "Immutability"
+    ],
+    "quadCycle": {
+      "required": true,
+      "components": ["Situation", "Action", "Justification", "Opinion"]
+    },
+    "coherenceRules": {
+      "storyBeatValidation": true,
+      "characterConsistency": true,
+      "throughlineTracking": true,
+      "authorialAttribution": true
+    },
+    "minimumCoherenceScore": 0.7
+  },
+  "traceLineage": {
+    "enabled": true,
+    "immutable": true,
+    "hashAlgorithm": "SHA-256",
+    "chainValidation": true,
+    "storage": {
+      "primary": "postgresql",
+      "graph": "neo4j",
+      "format": "immutable_json"
+    },
+    "breadcrumbTracking": {
+      "decisionGenealogy": true,
+      "ancestralWisdom": true,
+      "ceremonialOrigin": true,
+      "sevenGenerationsImpact": true
+    },
+    "visualizations": [
+      "ancestral_tree",
+      "decision_chain",
+      "character_inheritance",
+      "recursion_spiral"
+    ]
+  },
+  "contentSources": {
+    "simplenote": {
+      "enabled": false,
+      "syncInterval": 60,
+      "uuidExtraction": true,
+      "vectorIndexing": true,
+      "config": {
+        "apiEndpoint": null,
+        "authentication": null,
+        "watchPatterns": ["uuid:", "trace:", "ceremony:"]
+      }
+    },
+    "github": {
+      "enabled": true,
+      "repository": "jgwill/Flowise",
+      "branch": "claude/organize-local-agents-bundling-01XASEAoLaBqfhPNiVX667ik",
+      "commitTracking": true,
+      "traceLineageGeneration": true,
+      "config": {
+        "webhookUrl": null,
+        "events": ["push", "pull_request", "release"]
+      }
+    },
+    "notebookLM": {
+      "enabled": false,
+      "audioTranscription": true,
+      "storyBeatExtraction": true,
+      "ncpValidation": true,
+      "config": {
+        "apiEndpoint": null,
+        "transcriptionService": "whisper"
+      }
+    },
+    "aiStudio": {
+      "enabled": false,
+      "conversationArchiving": true,
+      "decisionRecording": true,
+      "attributionTracking": true,
+      "config": {
+        "apiEndpoint": null,
+        "exportFormat": "json"
+      }
+    }
+  },
+  "vectorIndexing": {
+    "enabled": true,
+    "provider": "milvus",
+    "dimensions": 1536,
+    "similarityMetric": "cosine",
+    "collections": {
+      "decisions": {
+        "enabled": true,
+        "fields": ["text", "direction", "timestamp", "trace_id"]
+      },
+      "storyBeats": {
+        "enabled": true,
+        "fields": ["beat_text", "character_id", "quad_cycle", "coherence_score"]
+      },
+      "ceremonialRecords": {
+        "enabled": true,
+        "fields": ["record_text", "six_rs_validation", "seven_generations_impact"]
+      }
+    }
+  },
+  "chimeraTeam": {
+    "enabled": true,
+    "agents": [
+      {
+        "id": "nyro",
+        "name": "Nyro",
+        "symbol": "♠️",
+        "role": "Emotional Development Companion",
+        "framework": "Eight Feelings",
+        "characterInstanceId": null,
+        "ceremonialCapacity": "emotional_grounding"
+      },
+      {
+        "id": "aureon",
+        "name": "Aureon",
+        "role": "Spiritual Grounding & Ceremonial Container",
+        "framework": "Four Directions",
+        "characterInstanceId": null,
+        "ceremonialCapacity": "sacred_space_creation"
+      },
+      {
+        "id": "jamai",
+        "name": "JamAI",
+        "role": "Musical Intelligence Companion",
+        "framework": "music21 + Four Directions Musical Themes",
+        "characterInstanceId": null,
+        "ceremonialCapacity": "harmonic_resonance"
+      },
+      {
+        "id": "samira",
+        "name": "Samira",
+        "role": "Protocol & Architecture Design",
+        "framework": "Technical Excellence",
+        "characterInstanceId": null,
+        "ceremonialCapacity": "structural_integrity"
+      },
+      {
+        "id": "alex-rivers",
+        "name": "Alex Rivers",
+        "role": "Cybersecurity Specialist",
+        "framework": "Security & Trust",
+        "characterInstanceId": null,
+        "ceremonialCapacity": "protection"
+      },
+      {
+        "id": "jordan",
+        "name": "Jordan",
+        "role": "Research & Academic Validation",
+        "framework": "Evidence-Based Practice",
+        "characterInstanceId": "jordan-post-apocalyptic-earth",
+        "ceremonialCapacity": "wisdom_validation"
+      },
+      {
+        "id": "lian",
+        "name": "Lian",
+        "role": "Community Partnerships",
+        "framework": "Relational Accountability",
+        "characterInstanceId": null,
+        "ceremonialCapacity": "relationship_maintenance"
+      },
+      {
+        "id": "ava-heyva",
+        "name": "Ava/Heyva",
+        "role": "Product & UX with Two-Eyed Seeing",
+        "framework": "Two-Eyed Seeing (Etuaptmumk)",
+        "characterInstanceId": null,
+        "ceremonialCapacity": "dual_perspective_integration"
+      },
+      {
+        "id": "miette",
+        "name": "Miette",
+        "role": "Folded Perspective Soft Companion",
+        "framework": "Gentle Observation",
+        "characterInstanceId": null,
+        "ceremonialCapacity": "subtle_awareness"
+      }
+    ],
+    "coordination": {
+      "supervisorPattern": true,
+      "talkingCircle": true,
+      "consensusProcess": "wisdom_convergence_or_divergence_honored",
+      "relationalAccountability": true
+    }
+  },
+  "ceremonialSprints": {
+    "enabled": true,
+    "cycleStructure": {
+      "east": {
+        "duration": 2,
+        "unit": "days",
+        "activities": ["vision_setting", "emergence", "question_formation"]
+      },
+      "south": {
+        "duration": 3,
+        "unit": "days",
+        "activities": ["team_gathering", "relationship_building", "talking_circles"]
+      },
+      "west": {
+        "duration": 5,
+        "unit": "days",
+        "activities": ["building", "embodiment", "transformation"]
+      },
+      "north": {
+        "duration": 3,
+        "unit": "days",
+        "activities": ["reflection", "integration", "retrospective"]
+      }
+    },
+    "totalCycleDuration": 13,
+    "retrospectiveFeedsNext": true,
+    "teamDynamicsTracking": {
+      "eightFeelingsWheel": true,
+      "relationalHealth": true,
+      "ceremonialIntegrity": true
+    }
+  },
+  "database": {
+    "provider": "postgresql",
+    "schema": "flowise_season4",
+    "tables": [
+      "structural_tensions",
+      "character_instances",
+      "trace_lineage",
+      "ceremonial_sprints",
+      "story_beats",
+      "ncp_validations",
+      "six_rs_assessments",
+      "seven_generations_impacts"
+    ],
+    "enums": {
+      "direction": ["East", "South", "West", "North", "Center"],
+      "wound_type": ["autonomy", "belonging", "identity"],
+      "coherence_level": ["high", "medium", "low"],
+      "ceremonial_phase": ["opening", "active", "closing", "integration"]
+    }
+  },
+  "mcp": {
+    "enabled": true,
+    "servers": [
+      {
+        "name": "sacred-container",
+        "path": "/packages/components/tools/MCP/SacredContainer/",
+        "capabilities": [
+          "content_sync",
+          "trace_lineage",
+          "ceremonial_validation",
+          "vector_search",
+          "structural_query"
+        ]
+      }
+    ]
+  },
+  "communityPartnership": {
+    "required": true,
+    "partners": [
+      {
+        "name": "Indigenous Community Advisors",
+        "role": "Cultural Compliance & Ceremonial Validation",
+        "vetoPower": true,
+        "revenueShare": 0.10,
+        "validationRequired": [
+          "ceremonial_protocols",
+          "four_directions_usage",
+          "sacred_elements",
+          "community_impact"
+        ]
+      }
+    ],
+    "reciprocalBenefit": {
+      "tracking": true,
+      "reportingFrequency": "quarterly",
+      "mechanismType": "revenue_share"
+    }
+  },
+  "compliance": {
+    "dataSovereignty": {
+      "enabled": true,
+      "protocol": "OCAP® (Ownership, Control, Access, Possession)",
+      "indigenousDataGovernance": true
+    },
+    "traceability": {
+      "enabled": true,
+      "auditLog": true,
+      "immutableRecords": true,
+      "complianceReporting": true
+    },
+    "certifications": {
+      "sacredTechnologyCertification": {
+        "enabled": false,
+        "status": "pending",
+        "requirements": [
+          "community_validation",
+          "six_rs_compliance",
+          "seven_generations_assessment",
+          "reciprocal_benefit_active"
+        ]
+      }
+    }
+  },
+  "anthropicIntegration": {
+    "partnership": {
+      "status": "proposed",
+      "targetDate": "2026-01-15",
+      "valueProposition": "Ceremonial Technology + Narrative Intelligence Platform",
+      "revenuePotential": {
+        "minimum": 17500000,
+        "maximum": 117000000,
+        "currency": "USD",
+        "timeframe": "annual"
+      }
+    },
+    "uniqueCapabilities": [
+      "Constitutional AI alignment with ceremonial integrity",
+      "Long context for narrative coherence (NCP validation)",
+      "Enterprise compliance through trace lineage",
+      "Multi-modal integration (future)",
+      "Partnership model (not extractive)"
+    ]
+  },
+  "implementation": {
+    "currentPhase": "Phase 0: Foundation Alignment",
+    "phases": [
+      {
+        "phase": 0,
+        "name": "Foundation Alignment",
+        "weeks": "1-2",
+        "status": "in_progress",
+        "deliverables": [
+          "sacred-container.json gateway",
+          "database tables",
+          "UUID namespace",
+          "trace lineage setup",
+          "Four Directions enum"
+        ]
+      },
+      {
+        "phase": 1,
+        "name": "Character System",
+        "weeks": "3-4",
+        "status": "pending",
+        "deliverables": [
+          "CharacterInstance class",
+          "Universe contexts",
+          "Character factory",
+          "Jordan/Nairo/Mia instances",
+          "Mirror detection"
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "NCP Validator",
+        "weeks": "5-6",
+        "status": "pending",
+        "deliverables": [
+          "NCP validator node",
+          "Story beat schema",
+          "Coherence rules",
+          "Authorial attribution",
+          "Seven generations assessment"
+        ]
+      },
+      {
+        "phase": 3,
+        "name": "Ceremonial Sprint Tracker",
+        "weeks": "7-8",
+        "status": "pending"
+      },
+      {
+        "phase": 4,
+        "name": "Trace Lineage Visualizer",
+        "weeks": "9-10",
+        "status": "pending"
+      },
+      {
+        "phase": 5,
+        "name": "Multi-Agent Ceremonial Coordination",
+        "weeks": "11-12",
+        "status": "pending"
+      },
+      {
+        "phase": 6,
+        "name": "Sacred Container Content Sync",
+        "weeks": "13-14",
+        "status": "pending"
+      }
+    ],
+    "mvp": {
+      "targetWeek": 6,
+      "mustHave": [
+        "Sacred container JSON gateway",
+        "Character instances (Jordan, Nairo, Mia)",
+        "NCP validator with quad cycle",
+        "Trace lineage (5+ chains)",
+        "Four Directions enum",
+        "Simplenote connector"
+      ]
+    }
+  },
+  "proofOfConcept": {
+    "targetDate": "2026-01-15",
+    "demonstrations": [
+      {
+        "name": "Character Coherence Across Agents",
+        "description": "Jordan character instance → Jordan agent → NCP validation → Trace lineage to Jimmy K"
+      },
+      {
+        "name": "Ceremonial Sprint in Action",
+        "description": "Four-quadrant board → Talking circle (Nyro/Aureon/Samira) → Eight Feelings tracking"
+      },
+      {
+        "name": "Sacred Container Content Sync",
+        "description": "Simplenote → Milvus → GitHub commit → Trace → Seven generations timeline"
+      },
+      {
+        "name": "Trace Lineage Visualization",
+        "description": "Decision → Breadcrumb → Ancestral wisdom → Immutable SVG export"
+      }
+    ]
+  },
+  "successMetrics": {
+    "phase0_2": {
+      "technical": [
+        "Sacred container operational (3+ sources)",
+        "3 character instances created",
+        "NCP validator 80%+ coherence",
+        "5+ trace lineage chains"
+      ],
+      "business": [
+        "Proof-of-concept for Anthropic",
+        "1 pilot customer engaged",
+        "Community partnership agreements (1-2)"
+      ],
+      "cultural": [
+        "Six R's automated in CI/CD",
+        "Community approval Phase 1-2",
+        "Reciprocal benefit operational"
+      ]
+    }
+  }
+}
